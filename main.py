@@ -7,7 +7,7 @@ import telebot
 
 """ Получение курса валют и рассчет суммы """
 
-bot = telebot.TeleBot('5756186967:AAH-VjfVop3SSq1BJ2GZlVjAz6vSd56pZfM');
+bot = telebot.TeleBot('token');
 
 @bot.message_handler(content_types=['text'])
 
