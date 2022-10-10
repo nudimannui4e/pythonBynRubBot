@@ -17,6 +17,7 @@ def get_text_messages(message):
       bot.send_message(message.from_user.id, "Введи сумму в Белках")
   else:
       real = 2.5
+      '''Примерный коридор купля\продажа'''
       global mes
       try:
           mes = float(message.text.replace(',', '.'))
