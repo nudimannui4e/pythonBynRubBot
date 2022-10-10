@@ -17,10 +17,12 @@ def get_text_messages(message):
   elif message.text == "/help":
       bot.send_message(message.from_user.id, "Введи сумму в Белках")
   else:
+      '''real - накидывает 2 руб, для приближения к курсу покупки, а не продажи'''
+      global real = 2
       global mes
       try:
           mes = float(message.text.replace(',', '.'))
-          bot.send_message(message.from_user.id,f"{currency() * mes:.2f} рублей.")
+          bot.send_message(message.from_user.id,f"{(currency() + real) * mes:.2f} рублей.")
       except Exception:
           bot.send_message(message.from_user.id ,f"Ошибка при обработке {message.text}")
 
