@@ -18,13 +18,11 @@ def get_text_messages(message):
       bot.send_message(message.from_user.id, "Введи сумму в Белках")
   else:
       global mes
-
       try:
-          mes = float(message.text)
+          mes = float(message.text.replace(',', '.')
+          bot.send_message(message.from_user.id,f"{currency() * mes:.2f} рублей.")
       except Exception:
           bot.send_message(message.from_user.id ,f"Ошибка при обработке {message.text}")
-
-      bot.send_message(message.from_user.id,f"{currency() * mes:.2f} рублей.")
 
 def currency():
     currencies = 'byn'
