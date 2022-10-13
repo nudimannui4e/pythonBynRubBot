@@ -17,7 +17,7 @@ def get_text_messages(message):
   elif message.text == "/help":
       bot.send_message(message.from_user.id, "Введи сумму в Белках")
   else:
-      real = 2.5
+      real = 2.6
       '''Примерный коридор купля\продажа'''
       global mes
       try:
