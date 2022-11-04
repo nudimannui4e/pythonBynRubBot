@@ -21,7 +21,7 @@ def get_text_messages(message):
       '''Примерный коридор купля\продажа'''
       global mes
       try:
-          mes = float(message.text.replace(',', '.'))
+          mes = float(message.text.replace(',', '.').replace(' ',''))
           bot.send_message(message.from_user.id,f"{(get_currency() + real) * mes:,.2f} рублей.")
       except Exception:
           bot.send_message(message.from_user.id ,f"Проверьте корректность ввода суммы: {message.text}")
